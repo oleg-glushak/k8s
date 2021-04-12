@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: nginx
   annotations:
-    external-dns.alpha.kubernetes.io/hostname: nginx2.k8s.zattoo.com
+    external-dns.alpha.kubernetes.io/hostname: nginx3.k8s.zattoo.com
 spec:
   type: LoadBalancer
   ports:
