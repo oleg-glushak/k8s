@@ -77,15 +77,15 @@ spec:
             value: http://squid.zattoo.com:3128
           - name: NO_PROXY
             value: 127.0.0.1,localhost,.local,.internal,172.30.0.0/16,91.123.96.29,10.233.0.0/16,10.234.0.0/16
-          - name: AWS_ACCESS_KEY_ID
+          - name: aws-access-key-id
             valueFrom:
               secretKeyRef:
-                name: AWS_ACCESS_KEY_ID
-                key: AWS_ACCESS_KEY_ID
-          - name: AWS_SECRET_ACCESS_KEY
+                name: aws-access-key-id
+                key: aws-access-key-id
+          - name: aws-secret-access-key
             valueFrom:
               secretKeyRef:
-                name: AWS_SECRET_ACCESS_KEY
-                key: AWS_SECRET_ACCESS_KEY
+                name: aws-secret-access-key
+                key: aws-secret-access-key
       securityContext:
         fsGroup: 65534 # For ExternalDNS to be able to read Kubernetes and AWS token files
