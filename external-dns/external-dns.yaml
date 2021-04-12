@@ -78,8 +78,14 @@ spec:
           - name: NO_PROXY
             value: 127.0.0.1,localhost,.local,.internal,172.30.0.0/16,91.123.96.29,10.233.0.0/16,10.234.0.0/16
           - name: AWS_ACCESS_KEY_ID
-            value: XXXXXXXXX
+            valueFrom:
+              secretKeyRef:
+                name: AWS_ACCESS_KEY_ID
+                key: AWS_ACCESS_KEY_ID
           - name: AWS_SECRET_ACCESS_KEY
-            value: XXXXXXXXX
+            valueFrom:
+              secretKeyRef:
+                name: AWS_SECRET_ACCESS_KEY
+                key: AWS_SECRET_ACCESS_KEY
       securityContext:
         fsGroup: 65534 # For ExternalDNS to be able to read Kubernetes and AWS token files
