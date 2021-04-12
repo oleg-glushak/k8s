@@ -74,9 +74,6 @@ spec:
           - name: AWS_ACCESS_KEY_ID
             value: XXXXXXXXX
           - name: AWS_SECRET_ACCESS_KEY
-            valueFrom:
-              secretKeyRef:
-                name: external-dns
-                key: XXXXXXXX
+            value: XXXXXXXXX
       securityContext:
         fsGroup: 65534 # For ExternalDNS to be able to read Kubernetes and AWS token files
