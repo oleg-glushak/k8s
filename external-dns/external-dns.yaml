@@ -77,12 +77,12 @@ spec:
             value: http://squid.zattoo.com:3128
           - name: NO_PROXY
             value: 127.0.0.1,localhost,.local,.internal,172.30.0.0/16,91.123.96.29,10.233.0.0/16,10.234.0.0/16
-          - name: aws-access-key-id
+          - name: AWS_ACCESS_KEY_ID
             valueFrom:
               secretKeyRef:
                 name: aws-access-key-id
                 key: aws-access-key-id
-          - name: aws-secret-access-key
+          - name: AWS_SECRET_ACCESS_KEY
             valueFrom:
               secretKeyRef:
                 name: aws-secret-access-key
