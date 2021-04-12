@@ -71,6 +71,12 @@ spec:
         - --registry=txt
         - --txt-owner-id=k8s-zattoo
         env:
+          - name: HTTPS_PROXY
+            value: http://squid.zattoo.com:3128
+          - name: HTTP_PROXY
+            value: http://squid.zattoo.com:3128
+          - name: NO_PROXY
+            value: 127.0.0.1,localhost,.local,.internal,172.30.0.0/16,91.123.96.29,10.233.0.0/16,10.234.0.0/16
           - name: AWS_ACCESS_KEY_ID
             value: XXXXXXXXX
           - name: AWS_SECRET_ACCESS_KEY
